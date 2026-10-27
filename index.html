@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrashFour</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="tap" class="show">Tap to start audio</div>
+  <header>
+    <h1>CrashFour</h1>
+    <p>Four-bar landing fills so the loop finally lands.</p>
+  </header>
+  <section>
+    <label>BPM <input id="bpm" type="number" min="60" max="180" value="92"></label>
+    <label>Key <select id="key">
+      <option>A minor</option><option>C major</option><option>D minor</option><option>E major</option><option>G major</option>
+    </select></label>
+    <label>Chords <input id="chords" value="Am F C G"></label>
+  </section>
+  <section id="grooves"></section>
+  <section id="recipes"></section>
+  <div id="bars"></div>
+  <div class="controls">
+    <button id="playA">Play bed</button>
+    <button id="playB">Play full</button>
+    <button id="play8">Play fill</button>
+    <button id="stop">Stop</button>
+    <button id="export">Export WAV+MIDI</button>
+    <button id="copy">Copy punch</button>
+  </div>
+  <pre id="punch"></pre>
+  <div id="status">Loading…</div>
+  <p class="note">iOS silent switch mutes Web Audio. Hardware MIDI not required for this desk.</p>
+  <script src="app.js"></script>
+</body>
+</html>
